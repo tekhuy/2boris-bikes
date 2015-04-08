@@ -6,4 +6,13 @@ describe Bike do
     it { is_expected.not_to be_broken }
   end
 
+  context 'during use' do
+
+    it 'can break' do
+      subject.break
+      expect(subject).to be_broken
+    end
+
+  end
+
 end
