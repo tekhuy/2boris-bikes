@@ -21,4 +21,10 @@ describe DockingStation do
     expect { subject.dock double :bike }.to raise_error 'Station Full'
   end
 
+  it 'it can have a larger capacity' do
+      subject.capacity = 30
+      30.times { subject.dock double :bike }
+      expect { subject.dock double :bike }.to raise_error 'Station Full'
+  end
+
 end
